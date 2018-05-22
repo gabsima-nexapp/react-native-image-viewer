@@ -295,13 +295,11 @@ export default class ImageViewer extends React.Component<Props, State> {
     this.setState(
       {
         currentShowIndex: nextIndex
-      },
-      () => {
-        if (this.props.onChange) {
-          this.props.onChange(this.state.currentShowIndex);
-        }
       }
     );
+    if (this.props.onChange) {
+      this.props.onChange(nextIndex);
+    }
   };
 
   /**
@@ -328,13 +326,11 @@ export default class ImageViewer extends React.Component<Props, State> {
     this.setState(
       {
         currentShowIndex: nextIndex
-      },
-      () => {
-        if (this.props.onChange) {
-          this.props.onChange(this.state.currentShowIndex);
-        }
       }
     );
+    if (this.props.onChange) {
+      this.props.onChange(nextIndex);
+    }
   }
 
   /**
